@@ -205,4 +205,4 @@ The published results were produced on a 2-vCPU Intel Xeon virtual machine at 2.
 
 ## Licence
 
-MIT; see `LICENSE`.
+MIT; see [LICENSE](LICENSE).
