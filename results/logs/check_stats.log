@@ -1,0 +1,36 @@
+# 2026-10-11T10:12Z  Python 3.11.15
+Wilcoxon signed-rank, exact branch, against enumeration of the null distribution
+  ok    315 random samples agree with the enumerated distribution
+Wilcoxon signed-rank, exact under TIED absolute differences, against enumeration
+  ok    291 tied samples agree with the enumerated distribution
+Wilcoxon: the extreme case
+  ok    every difference positive, n=6: got 0.03125, want 0.03125
+Sign test
+  ok    8 of 10 positive: got 0.109375, want 0.109375
+Vargha--Delaney A12
+  ok    identical samples: got 0.5, want 0.5
+  ok    strictly greater: got 1.0, want 1.0
+  ok    strictly smaller: got 0.0, want 0.0
+Paired superiority
+  ok    a above b on every pair: got 1.0, want 1.0
+  ok    one tie of four: got 0.625, want 0.625
+Holm step-down
+  ok    smallest p times m: got 0.03, want 0.03
+  ok    monotone, so b is raised to c's: got 0.06, want 0.06
+  ok    middle p times m-1: got 0.06, want 0.06
+Chi-squared survival, at the tabulated 5% critical values
+  ok    chi2_sf(3.8415, 1): got 0.04999877207122172, want 0.05
+  ok    chi2_sf(5.9915, 2): got 0.049999113685555166, want 0.05
+  ok    chi2_sf(7.8147, 3): got 0.05000062528476027, want 0.05
+  ok    chi2_sf(9.4877, 4): got 0.05000059954123466, want 0.05
+  ok    chi2_sf(0, 1): got 1.0, want 1.0
+Friedman, against the closed form
+  ok    perfect agreement, 6 blocks: got 12.0, want 12.0
+  ok    degrees of freedom: got 2, want 2
+  ok    no agreement gives zero: got 0.0, want 0.0
+  ok    tied values share a mean rank: got 1.5, want 1.5
+  ok    tie-corrected statistic: got 10.0, want 10.0
+Bootstrap interval
+  ok    the interval contains the point estimate
+
+all statistics checks passed

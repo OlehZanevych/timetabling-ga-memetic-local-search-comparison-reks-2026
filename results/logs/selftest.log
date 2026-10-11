@@ -1,0 +1,6 @@
+# 2026-10-11T10:12Z  g++ 13.3.0  Linux 6.18.44-fc-v114
+planted schedules feasible ......... ok
+instance files round-trip .......... ok
+evaluators agree term by term ...... ok
+
+self-test passed

@@ -1,0 +1,83 @@
+# Verification rerun, 11 October 2026 (UTC), sources in ../src built afresh with g++ 13.3.0 -O3
+# r1/r2: build of the sources as of 5 October; r3: build of the sources as of 11 October (error handling, instance list)
+# commands: compare --seeds 10 (all methods, split ga,ma,ma-adaptive | sls,sa,rrhc); crossover --seeds 6; converge --seeds 10 (split);
+#           evalcost --seeds 6; tune --seeds 5 --only ga,rrhc; budgetmode --seeds 2 --maxn 400; agreement --seeds 20 --only rrhc,ga
+# note: tuning.csv appears as "compared" in r1, r2 and r3 only because it was copied in as their input; the tune check is r3t.
+
+## python3 scripts/compare_results.py results <r1>
+  only in results: agreement.csv
+  only in results: budgetmode.csv
+  compare.csv: 150 matching runs compared, 0 differ (150 only in results, 0 only in r1)
+  converge.csv: 240 matching runs compared, 0 differ (240 only in results, 0 only in r1)
+  crossover.csv: 48 matching runs compared, 0 differ (0 only in results, 0 only in r1)
+  only in results: evalcost.csv
+  only in results: evalcost_tuned.csv
+  only in results: timed.csv
+  tuning.csv: 507 matching runs compared, 0 differ (0 only in results, 0 only in r1)
+  only in results: tuning_runs.csv
+identical in every compared deterministic column
+
+## python3 scripts/compare_results.py results <r2>
+  only in results: agreement.csv
+  only in results: budgetmode.csv
+  compare.csv: 150 matching runs compared, 0 differ (150 only in results, 0 only in r2)
+  converge.csv: 240 matching runs compared, 0 differ (240 only in results, 0 only in r2)
+  only in results: crossover.csv
+  evalcost.csv: 216 matching runs compared, 0 differ (0 only in results, 0 only in r2)
+  only in results: evalcost_tuned.csv
+  only in results: timed.csv
+  tuning.csv: 507 matching runs compared, 0 differ (0 only in results, 0 only in r2)
+  only in results: tuning_runs.csv
+identical in every compared deterministic column
+
+## python3 scripts/compare_results.py results <r3t>
+  only in results: agreement.csv
+  only in results: budgetmode.csv
+  only in results: compare.csv
+  only in results: converge.csv
+  only in results: crossover.csv
+  only in results: evalcost.csv
+  only in results: evalcost_tuned.csv
+  only in results: timed.csv
+  tuning.csv: 91 matching runs compared, 0 differ (416 only in results, 0 only in r3t)
+  tuning_runs.csv: 260 matching runs compared, 0 differ (520 only in results, 0 only in r3t)
+identical in every compared deterministic column
+
+## python3 scripts/compare_results.py results <r3>
+  agreement.csv: 80 matching runs compared, 0 differ (160 only in results, 0 only in r3)
+  budgetmode.csv: 24 matching runs compared, 0 differ (216 only in results, 0 only in r3)
+  only in results: compare.csv
+  only in results: converge.csv
+  only in results: crossover.csv
+  only in results: evalcost.csv
+  only in results: evalcost_tuned.csv
+  only in results: timed.csv
+  tuning.csv: 507 matching runs compared, 0 differ (0 only in results, 0 only in r3)
+  only in results: tuning_runs.csv
+identical in every compared deterministic column
+
+## python3 scripts/compare_results.py results <r4a>   (evalcost --seeds 6 --tuned, 11 October sources)
+  only in results: agreement.csv
+  only in results: budgetmode.csv
+  only in results: compare.csv
+  only in results: converge.csv
+  only in results: crossover.csv
+  only in results: evalcost.csv
+  evalcost_tuned.csv: 108 matching runs compared, 0 differ (108 only in results, 0 only in r4a)
+  only in results: timed.csv
+  tuning.csv: 507 matching runs compared, 0 differ (0 only in results, 0 only in r4a)
+  only in results: tuning_runs.csv
+identical in every compared deterministic column
+
+## python3 scripts/compare_results.py results <r4b>   (evalcost --seeds 6 --tuned, 11 October sources)
+  only in results: agreement.csv
+  only in results: budgetmode.csv
+  only in results: compare.csv
+  only in results: converge.csv
+  only in results: crossover.csv
+  only in results: evalcost.csv
+  evalcost_tuned.csv: 108 matching runs compared, 0 differ (108 only in results, 0 only in r4b)
+  only in results: timed.csv
+  tuning.csv: 507 matching runs compared, 0 differ (0 only in results, 0 only in r4b)
+  only in results: tuning_runs.csv
+identical in every compared deterministic column
